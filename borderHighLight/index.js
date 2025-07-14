@@ -2,7 +2,8 @@
 
     // Container; 
     const container = document.querySelector('.container');
-    const image = document.querySelector('.img');
+    const image = document.getElementById('img');
+    const imageSrc = document.getElementById('imageSrc');
 
     // calling the change border function; 
     changeBorder();
@@ -43,13 +44,11 @@
     // Color change when the button is clicked; 
     changeBorder.addEventListener('click', () => {
         let randomcolor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-        console.log(randomcolor);
         container.style.border = `5px solid ${randomcolor}`;
     })
 
     // Making it auto by using the set time out; 
-    }
-    
+}
     // auto call function;
     function auto_call(){
         let changeBorder = document.getElementById("borderColor");
@@ -64,9 +63,8 @@
             changeBorder.innerText = randomcolor;
 
             // let's change the image also. 
-            let randomImage = document.createElement('img');
-            randomImage.src = `https://source.unsplash.com/random/200x200?sig=${Math.floor(Math.random() * 1000)}`;
-            randomImage.alt = "Random Image";
-            image.replaceWith(randomImage);
+            let randomImage = `https://picsum.photos/200/300?random=${Math.floor(Math.random() * 1000)}`;
+            imageSrc.src = randomImage;
+            console.log(randomImage);
         }, 2000);
     }
