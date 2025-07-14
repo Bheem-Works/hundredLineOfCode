@@ -3,7 +3,7 @@
     // Container; 
     const container = document.querySelector('.container');
     const image = document.querySelector('.img');
-    console.log(image);
+
     // calling the change border function; 
     changeBorder();
 
@@ -48,7 +48,9 @@
     })
 
     // Making it auto by using the set time out; 
-}
+    }
+    
+    // auto call function;
     function auto_call(){
         let changeBorder = document.getElementById("borderColor");
         setInterval(() => {
