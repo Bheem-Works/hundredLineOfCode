@@ -1,13 +1,17 @@
     // Hello this is the js don't be shock haha.
 
-    window.onload = function() {
-        changeBorder();
-    }
+    // Container; 
+    const container = document.querySelector('.container');
+    const image = document.querySelector('.img');
+    console.log(image);
+    // calling the change border function; 
+    changeBorder();
 
     // Main -- Button function;
     function changeBorder() {
         border_css();
         border_color();
+        auto_call();
     }
 
     // Button css property; 
@@ -23,7 +27,7 @@
             changeBorder.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
 
             // setting the hover; 
-            changeBorder.addEventListener('mouseleave', () => {
+            changeBorder.addEventListener('mouseover', () => {
                 changeBorder.innerText = "Click me!";
                 changeBorder.style.backdropFilter = "blur(5px)";
                 changeBorder.style.backgroundColor = "#C68DF4";
@@ -33,9 +37,34 @@
 
     // Border color change functions; 
     function border_color(){
-          let changeBorder = document.getElementById("borderColor");
-            
+    let changeBorder = document.getElementById("borderColor");
+    changeBorder.innerText = "Clicked!";
+
+    // Color change when the button is clicked; 
     changeBorder.addEventListener('click', () => {
-        changeBorder.innerHTML = "Clicked!";
+        let randomcolor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+        console.log(randomcolor);
+        container.style.border = `5px solid ${randomcolor}`;
     })
+
+    // Making it auto by using the set time out; 
+}
+    function auto_call(){
+        let changeBorder = document.getElementById("borderColor");
+        setInterval(() => {
+            let randomcolor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+            console.log(randomcolor);
+            container.style.border = `5px solid ${randomcolor}`;
+            changeBorder.style.backdropFilter = "blur(0px)";
+            changeBorder.style.color = "black";
+
+            // let's change the text; 
+            changeBorder.innerText = randomcolor;
+
+            // let's change the image also. 
+            let randomImage = document.createElement('img');
+            randomImage.src = `https://source.unsplash.com/random/200x200?sig=${Math.floor(Math.random() * 1000)}`;
+            randomImage.alt = "Random Image";
+            image.replaceWith(randomImage);
+        }, 2000);
     }
