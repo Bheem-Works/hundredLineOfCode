@@ -49,10 +49,12 @@
 
 let foo = ["ohh", "shit", "here", "we", "go", "again"];
 
-const readLine = require("node:readline");
+const readLine = require("node:readline"); // Bring the from the module.
 const { stdin: input, stdout: output } = require("node:process");
 const rl = readLine.createInterface({ input, output });
-rl.question("Is this is your book?", (answer) => {
-  console.log(`Is this your name ? ${answer}`);
+rl.question("Whose book is this ?", (answer) => {
+  console.log(`This is ${answer} book right? `);
+  let callFoo = foo[answer];
+  console.log(callFoo);
   rl.close();
 });
