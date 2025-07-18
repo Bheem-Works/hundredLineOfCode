@@ -71,26 +71,28 @@
 
 // find out the fabinacci sequence in the js.
 
-function fabi(n) {
-  let fab = [0, 1];
-  for (let i = 2; i < n; i++) {
-    fab[i] = fab[i - 1] + fab[i - 2];
+// function fabi(n) {
+// let fab = [0, 1];
+//   for (let i = 2; i < n; i++) {
+//     fab[i] = fab[i - 1] + fab[i - 2];
+//   }
+//   return fab;
+// }
+// console.log("first fabionacci sequence");
+// console.log(fabi(5));
+// console.log("");
+
+function coolModule(id) {
+  function showId() {
+    console.log(id);
   }
-  return fab;
+  return {
+    showId: showId,
+  };
 }
-console.log("first fabionacci sequence");
-console.log(fabi(5));
-console.log("");
 
-// without the functions
+var foo = coolModule("foo1");
+var foo2 = coolModule("foo2");
 
-let n1 = 0,
-  n2 = 1,
-  n = 4,
-  nexTerm;
-
-for (let i = 1; i < n; i++) {
-  nextTerm = n1 + n2;
-  n1 = n2;
-  n2 = nextTerm;
-}
+foo.showId(); // foo1;
+foo2.showId(); // foo2;
