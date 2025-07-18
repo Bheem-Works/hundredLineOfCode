@@ -47,13 +47,50 @@
 //2. Get the input by using the terminal;
 // Start - - - - - - - - - -
 
-let foo = ["ohh", "shit", "here", "we", "go", "again"];
-const readLine = require("node:readline"); // Bring the from the module.
-const { stdin: input, stdout: output } = require("node:process");
-const rl = readLine.createInterface({ input, output });
-rl.question("Whose book is this ?", (answer) => {
-  console.log(`This is ${answer} book right? `);
-  let callFoo = foo[answer];
-  console.log(callFoo);
-rl.close();
-});
+// let foo = ["ohh", "shit", "here", "we", "go", "again"];
+// const readLine = require("node:readline"); // Bring the from the module.
+// const { stdin: input, stdout: output } = require("node:process");
+// const rl = readLine.createInterface({ input, output });
+// rl.question("Whose book is this ?", (answer) => {
+//   console.log(`This is ${answer} book right? `);
+//   let callFoo = foo[answer];
+//   console.log(callFoo);
+// rl.close();
+// });
+
+// // Testing the fiter methods.
+// const boo = ['miso love eggs'];
+// function checkFilter(st,ts){
+//   if(st == ts){
+//     console.log("The string is same");
+//   }
+// }
+
+// console.log(checkFilter(boo,'o'));
+//
+
+// find out the fabinacci sequence in the js.
+
+function fabi(n) {
+  let fab = [0, 1];
+  for (let i = 2; i < n; i++) {
+    fab[i] = fab[i - 1] + fab[i - 2];
+  }
+  return fab;
+}
+console.log("first fabionacci sequence");
+console.log(fabi(5));
+console.log("");
+
+// without the functions
+
+let n1 = 0,
+  n2 = 1,
+  n = 4,
+  nexTerm;
+
+for (let i = 1; i < n; i++) {
+  nextTerm = n1 + n2;
+  n1 = n2;
+  n2 = nextTerm;
+}
