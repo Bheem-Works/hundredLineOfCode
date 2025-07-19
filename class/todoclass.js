@@ -95,7 +95,14 @@ function Round(radius){
 
 const oval = new Round(10);
 oval.location = {x:0};
-const propertyName = 'center location';
-oval[propertyName] = {x:2}
 delete oval.location;
-delete oval['location'];
+
+// Taking out the value and the .keys
+for(let key in oval){
+  console.log(key,oval[key])
+};
+const findKey = Object.keys(oval);
+console.log(findKey);
+
+if ('radius' in oval)
+  console.log("it has the radius");
