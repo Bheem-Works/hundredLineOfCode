@@ -47,3 +47,22 @@ function one(){
   console.log("one one is the number");
 }
 one.call();
+
+// syntax; 
+// apply(thisArgs,argsArray);
+  
+const number = [1,2,3,4,5];
+const max = Math.max.apply({},number);
+console.log(max);
+
+const firstNum = ["a","b"];
+const secondNum = [1,2,3];
+const joinNumber = firstNum.push.apply(firstNum,secondNum);
+console.info(firstNum);
+console.log("First nume",firstNum);
+// another pusshing way; 
+const a = [1,2,34];
+const b = [1,2,4];
+console.log("thi");
+a.push(...b);
+console.info(a);
