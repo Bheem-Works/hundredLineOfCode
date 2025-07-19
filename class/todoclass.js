@@ -48,9 +48,9 @@ function one(){
 }
 one.call();
 
-// syntax; 
+// syntax;
 // apply(thisArgs,argsArray);
-  
+
 const number = [1,2,3,4,5];
 const max = Math.max.apply({},number);
 console.log(max);
@@ -60,19 +60,42 @@ const secondNum = [1,2,3];
 const joinNumber = firstNum.push.apply(firstNum,secondNum);
 console.info(firstNum);
 console.log("First nume",firstNum);
-// another pusshing way; 
+// another pusshing way;
 const a = [1,2,34];
 const b = [1,2,4];
 console.log("thi");
 a.push(...b);
 console.info(a);
 
-let x = 10; 
+let x = 10;
 console.log("X",x)
-let y = x; // 10; 
+let y = x; // 10;
 x = 20;
 
 let c = { value : 10};
-let d = c; 
+let d = c;
 d.value = 30;
 
+var ten = 10;
+function increaseTen(n){
+  n++;
+  return n;
+}
+let increasedNumber = increaseTen(ten);
+console.log(increasedNumber,"increasedNumber"); // 11;
+increaseTen(ten);
+console.log(ten); // 10;
+
+function Round(radius){
+  this.radius = radius;
+  this.draw = function(){
+    console.log('draw');
+  }
+}
+
+const oval = new Round(10);
+oval.location = {x:0};
+const propertyName = 'center location';
+oval[propertyName] = {x:2}
+delete oval.location;
+delete oval['location'];
