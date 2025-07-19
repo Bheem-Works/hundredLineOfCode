@@ -88,12 +88,29 @@ console.log(ten); // 10;
 
 function Round(radius){
   this.radius = radius;
+  let defaultLocation = {x:0,y:0}
+  this.getDefaultLocation = function () {
+    return defaultLocation;
+  };
+  
+  // defining the object properties; 
+  Object.defineProperty(this,'defaultLocation',{
+    get: function () {
+      return defaultLocation;
+    },
+    set:function (value){
+      if(!value.x || !value.y)
+        throw new Error('invalid error');
+      defaultLocation = value;
+    }
+  })
   this.draw = function(){
     console.log('draw');
   }
 }
 
 const oval = new Round(10);
+oval.defaultLocation = 1; 
 oval.location = {x:0};
 delete oval.location;
 
@@ -106,3 +123,10 @@ console.log(findKey);
 
 if ('radius' in oval)
   console.log("it has the radius");
+
+let defaultLocation = {x:0,y:0};
+
+this.getDefaultLocation = function () {
+  return defaultLocation;
+}
+
