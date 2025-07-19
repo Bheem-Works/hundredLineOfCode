@@ -66,3 +66,13 @@ const b = [1,2,4];
 console.log("thi");
 a.push(...b);
 console.info(a);
+
+let x = 10; 
+console.log("X",x)
+let y = x; // 10; 
+x = 20;
+
+let c = { value : 10};
+let d = c; 
+d.value = 30;
+
