@@ -96,3 +96,9 @@ var foo2 = coolModule("foo2");
 
 foo.showId(); // foo1;
 foo2.showId(); // foo2;
+
+// Revise words;
+function revise(w) {
+  return w.split("").reverse().join("");
+}
+console.log(revise("hello"));
