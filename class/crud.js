@@ -20,6 +20,7 @@ const Push = new AddList();
 console.log(Push.add("new"));
 console.log("another one\n\n ----");
 
+// I want to delete the value like this through the index numbers;
 let items = [1, 2, 3, 4];
 let itemIdx = items[1];
 function filterItems(items, idx) {
