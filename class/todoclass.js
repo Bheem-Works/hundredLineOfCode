@@ -129,4 +129,3 @@ let defaultLocation = {x:0,y:0};
 this.getDefaultLocation = function () {
   return defaultLocation;
 }
-
