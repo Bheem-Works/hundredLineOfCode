@@ -1,0 +1,34 @@
+function identify() {
+  return this.name.toUpperCase();
+}
+
+function speak() {
+  var gretting = "hello i am " + identify.call(this);
+  console.log(gretting);
+}
+
+var me = { name: "vim" };
+var you = { name: "miso" };
+
+console.log(identify.call(me)); // vim;
+identify.call(you); // you;
+
+speak.call(me);
+
+// alternative approach without using the this
+function letIdentify(context) {
+  console.log(context.name.toUpperCase());
+}
+
+function letCall(context) {
+  var gretting = "hello i am " + identify(context);
+  console.log(gretting);
+}
+
+letIdentify(me);
+
+function pen() {
+  console.log("i am having a pen right now");
+}
+
+pen.call();

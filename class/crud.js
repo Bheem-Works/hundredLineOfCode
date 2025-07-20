@@ -5,25 +5,26 @@ class AddList {
   }
 
   add(newValue) {
-    const value = (this[this.length] = newValue);
-    const value_container = this.store.push(value);
-    return value;
+    const value = (this[this.length] = newValue); // 'new'
+    const value_container = this.store.push(value); // 1;
+    return value, value_container;
   }
 
-  remove(number) {}
+  remove(number) {
+    const remove = value_container.slice(0, number);
+    return remove;
+  } // i have to delete the matching vlaue
 }
 
 const Push = new AddList();
 console.log(Push.add("new"));
 console.log("another one\n\n ----");
-          
-// let's find out the even and the other's number;
+
 let items = [1, 2, 3, 4];
-// i have to do with the index; like this
-// [1,2,3,]
-// (1) -> gives the the 1 index value which is 2 and it will remove the all unmatching value; 
-function filterItems(items, find) {
-  const filterItem = items.filter((itm) => itm === find);
+let itemIdx = items[1];
+function filterItems(items, idx) {
+  const filterItem = items.filter((itm) => itm === idx);
   return filterItem;
 }
 
+console.log(filterItems(items, itemIdx));
