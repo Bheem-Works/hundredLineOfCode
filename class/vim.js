@@ -32,3 +32,14 @@ function pen() {
 }
 
 pen.call();
+
+let person = {
+  name: "vim",
+  greet: function () {
+    console.log(this.name); // 'vim';
+  },
+};
+
+let greeFunc = person.greet.bind(person);
+greeFunc();
+person.greet();

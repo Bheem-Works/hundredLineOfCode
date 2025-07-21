@@ -29,3 +29,6 @@ function filterItems(items, idx) {
 }
 
 console.log(filterItems(items, itemIdx));
+
+// if live share is acessed write something's over here. 
+console.log("here is the thing's that i have write it down here. haha");
