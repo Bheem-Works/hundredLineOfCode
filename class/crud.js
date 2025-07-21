@@ -25,15 +25,12 @@ class AddList {
 
 const Push = new AddList();
 console.log(Push.add("new"));
-console.log([...Push.store]);
-console.log("seconds");
 console.log(Push.add("new one"));
-console.log("third");
 console.log([...Push.store]);
-console.log("fourth");
 console.log(Push.remove(0));
-console.log("third")
 console.log([...Push.store]);
 console.log({...Push.update(0, 1)}); 
 console.log([...Push.store]); 
 console.log(Push.read(4));
+
+export default AddList;
