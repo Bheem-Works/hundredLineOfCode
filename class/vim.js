@@ -114,3 +114,63 @@ caaat.speak(); // output : mika makes a sound.
 function remot() {
   console.log("name", this.name);
 }
+var ooobj = { name: "objc" },
+  oobj2 = { name: "objojj" };
+
+function selfCall() {
+  var self = this;
+  setTimeout(() => {
+    console.log(self.y);
+  }, 100);
+}
+
+var selfObj = {
+  y: 3,
+};
+
+selfCall.call(selfObj); // 3;
+
+function car(name, brand) {
+  this.name = name;
+  this.brand = brand;
+}
+
+const showCarName = new car("toyota", "bhandina");
+console.log(showCarName);
+
+function introduce(oneLanguage, twoLanguage) {
+  console.log("hi", +this.name + "loves" + this.language1 + this.language2);
+}
+var vimCat = { name: "miso" };
+introduce.apply(person, ["js", "c++"]);
+
+// Syntax;
+// ✅ new
+// new Constructor(arguments...)
+
+// ✅ bind
+// function.bind(thisArg, arguments...)
+
+// ✅ call
+// function.call(thisArg, arguments...)
+
+// ✅ apply
+// function.apply(thisArg, [arguments...])
+
+// ✅ map
+// array.map((value, index) => { ... })
+
+// ✅ forEach
+// array.forEach((value, index) => { ... })
+
+// ✅ filter
+// array.filter((value, index) => { ... })
+
+// ✅ reduce
+// array.reduce((accumulator, value, index) => { ... }, initialValue)
+
+// ✅ setTimeout
+// setTimeout(function, delayInMs)
+
+// ✅ setInterval
+// setInterval(function, delayInMs);
