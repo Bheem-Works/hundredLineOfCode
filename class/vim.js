@@ -43,3 +43,24 @@ let person = {
 let greeFunc = person.greet.bind(person);
 greeFunc();
 person.greet();
+
+let obj = {
+  a: "a",
+};
+let objChange = (obj.a = "b");
+console.log(objChange);
+
+// Change in the 'this' methods
+function foo() {
+  console.log((foo.a = "miso"));
+  let change = this.a;
+  change = "miama";
+  console.log(change);
+}
+
+let boo = {
+  a: "noBike",
+};
+boo.a = "vimBike";
+console.log(boo);
+foo(); // 'miso';
