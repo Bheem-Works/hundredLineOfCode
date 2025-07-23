@@ -63,4 +63,54 @@ let boo = {
 };
 boo.a = "vimBike";
 console.log(boo);
-foo(); // 'miso';
+
+// Github code.
+// new binding;
+function iva(a) {
+  this.a = a;
+}
+
+var baz = {};
+var jok = iva.bind(baz);
+jok(2);
+console.log(baz.a);
+var iba = new iva(3);
+console.log(iba.a);
+
+// hard binding;
+function hardBind(a, b) {
+  this.z = a + b;
+}
+
+var bar = hardBind.bind(null, "a");
+var baz = new bar("b");
+console.log(baz.z); // ab;
+
+// Object.create() -> it's a javascript methods which used to create a object, allowing for precise control over
+// over it's prototype chain and the properties.
+// Syntax -> Object.create(proto[,properties]);
+// Examples:
+const animal = {
+  speak() {
+    console.log(`${this.name} meoowww`);
+  },
+};
+
+const cat = Object.create(animal);
+cat.name = "miso";
+cat.speak(); // output : miso makes sound;
+
+const caaat = Object.create(animal, {
+  name: {
+    value: "mika",
+    writable: true,
+    enumerable: true,
+    configurable: true,
+  },
+});
+caaat.speak(); // output : mika makes a sound.
+
+// soft bingin ->
+function remot() {
+  console.log("name", this.name);
+}
