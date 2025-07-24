@@ -10,5 +10,44 @@
 <body>
     <a href="borderHighLight/index.html">border highlight</a>
     <a href="filterWord/index.html">filter word</a>
+
+    <!-- this is for copy the text to the clipboard -->
+    <div>
+      <input type="text" id="copyText" value="this is the vim magar">
+      <button type="button" onclick="copyText()"></button>
+    </div>
+    
+   <!-- this is for the paste the text --> 
+    <div>
+    <input type="text" id="pasteCopy" name="paste" value="You can paste this adress value">  
+    <button type="button" onclick="paste()">Paste</button>
+    <p>Here will be the output of the paste: <span id="ouputSpan"></span></p>
+    </div>
+    <script>
+
+      // This is for the copy text; 
+      async function copyText(){
+        try{
+      const text = document.getelementbyid('copytext').value;
+        await navigator.clipboard.writeText(text);
+     // ^^^   ^^^^^^ ___ ^^^^^^ _ ^^^^^____ ^^^^ => navigatore.clipboard.writeText() this is read the text and copied it to the clipboards;
+      // ||-> Await is for resolve the api and return the value to the clipboard;
+        alert("you have sucess fully copy the text");
+        }catch(err){
+        console.error("you have not copied the text",err);
+        }
+      }
+
+      // This is for the paste the text;
+      async function paste(){
+        try{
+          const pasteWait = await navigator.clipboard.readText();
+          document.getelementbyid('ouputSpan').textContext = pasteWait;
+          alert("you have sucess fully paste the text");
+        } catch(err){
+          console.errror("you have an error for paste sorry",err);
+        }
+      } 
+    </script>
 </body>
 </html>
