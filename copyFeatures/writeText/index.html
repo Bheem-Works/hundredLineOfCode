@@ -1,0 +1,28 @@
+!<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ClipBoard text</title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div>
+     <input type="text" id="text" value="Hello my name is miso"> 
+     <button type="button" onclick="copyText()">CopyText</button>
+    </div>
+
+    <script>
+      async function copyText(){
+        try{
+          const text = document.getElementById('text').value;
+          await navigator.clipboard.writeText(text); // this will copied the text to the clipboard;
+          alert("haha you have suceffuly copied the text!")
+        }
+        catch(error){
+          console.log("Huhu sorry this text can not be copied"); // but yo chai kaile run hunca ra kasari wrong grnu skincha ra??
+        }
+      }
+    </script>
+  </body>
+</html>

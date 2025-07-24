@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>paste text</title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <input type="text" id="text" value="ma ya chana khadai chu hau mero daath nai dukhie sako bhanum nah."> 
+    <button type="button" onclick="pasteText()">Paste Text</button>
+    <p>Paste text here: <span id="output"></span></p>
+
+    <script>
+      async function pasteText(){
+        try {
+          const text = await navigator.clipboard.readText(); // -> This will check the text to the keyboard if it does have  then it will copied from that and render it. 
+          console.log("text",text);
+          document.getElementById('output').textContent = text;
+          alert("okay! you have copied the text");
+        }catch(err){
+          console.error("Sorry we can not paste the text",err);
+        }
+      }
+    </script>
+  </body>
+</html>
