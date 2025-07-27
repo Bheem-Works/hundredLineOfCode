@@ -5,19 +5,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Text copy! </title>
+
+ <!-- background theme black --> 
+ <style>
+body{
+  background-color: black;
+  color:white;
+}
+ </style>
 </head>
 
 <body>
   <div class="text">
     <p id="pText">I don't so like mouse i want to try the arch linux. I heard that it is pretty cool? </p>
+    <p id="st">stats:..</p>
     <button id="copy">Copy</button>
   </div>
   <!-- //here will be the javscript code;  -->
   <script>
-    let text = document.getElementById("pText").innerHTML;
     document.getElementById('copy').addEventListener('click',copyText);
     async function copyText() {
-
+      try{
+    let text = document.getElementById("pText").innerText;
+    let status = document.getElementById('st');
+    status.textContent = 'loading.....';
+      await navigator.clipboard.writeText(text);
+      alert('i am already in');
+      }catch(error){
+        console.error("Sorry we can not copy the text");
+      }
     }
   </script>
 </body>
