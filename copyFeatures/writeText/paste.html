@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>paste text</title>
-    <link href="css/style.css" rel="stylesheet">
-  </head>
-  <body>
-    <input type="text" id="text" value="ma ya chana khadai chu hau mero daath nai dukhie sako bhanum nah."> 
-    <button type="button" onclick="pasteText()">Paste Text</button>
-    <p>Paste text here: <span id="output"></span></p>
 
-    <script>
-      async function pasteText(){
-        try {
-          const text = await navigator.clipboard.readText(); // -> This will check the text to the keyboard if it does have  then it will copied from that and render it. 
-          console.log("text",text);
-          document.getElementById('output').textContent = text;
-          alert("okay! you have copied the text");
-        }catch(err){
-          console.error("Sorry we can not paste the text",err);
-        }
-      }
-    </script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text copy! </title>
+</head>
+
+<body>
+  <div class="text">
+    <p id="pText">I don't so like mouse i want to try the arch linux. I heard that it is pretty cool? </p>
+    <button id="copy">Copy</button>
+  </div>
+  <!-- //here will be the javscript code;  -->
+  <script>
+    let text = document.getElementById("pText").innerHTML;
+    document.getElementById('copy').addEventListener('click',copyText);
+    async function copyText() {
+
+    }
+  </script>
+</body>
+
 </html>
