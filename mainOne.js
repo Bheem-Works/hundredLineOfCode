@@ -102,3 +102,9 @@ function revise(w) {
   return w.split("").reverse().join("");
 }
 console.log(revise("hello"));
+
+// find out the acending and the descending oder;
+
+let numbers = [8, 4, 5, 6];
+console.log(numbers.sort((a, b) => a - b));
+console.log(numbers.reduce((a, b) => a + b));
