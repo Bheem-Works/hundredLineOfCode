@@ -106,10 +106,12 @@ console.log(revise("hello"));
 // find out the acending and the descending oder;
 
 let numbers = [8, 4, 5, 6];
+let store = [];
 console.log(numbers.sort((a, b) => a - b));
 console.log(numbers.reduce((a, b) => a + b));
 
 // let's find out the through the original code;
+// let me push the file again okay?
 for (let i = 0; i < numbers.length; i++) {
   for (let j = i + 1; j < numbers.length; j++) {
     if (numbers[i] > numbers[j]) {
