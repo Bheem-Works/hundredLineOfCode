@@ -108,3 +108,11 @@ console.log(revise("hello"));
 let numbers = [8, 4, 5, 6];
 console.log(numbers.sort((a, b) => a - b));
 console.log(numbers.reduce((a, b) => a + b));
+
+// let's find out the through the original code;
+for (let i = 0; i < numbers.length; i++) {
+  for (let j = i + 1; j < numbers.length; j++) {
+    if (numbers[i] > numbers[j]) {
+    }
+  }
+}
