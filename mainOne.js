@@ -111,10 +111,20 @@ console.log(numbers.sort((a, b) => a - b));
 console.log(numbers.reduce((a, b) => a + b));
 
 // let's find out the through the original code;
-// let me push the file again okay?
-for (let i = 0; i < numbers.length; i++) {
-  for (let j = i + 1; j < numbers.length; j++) {
-    if (numbers[i] > numbers[j]) {
+let arrNum = [4, 1, 2, 5];
+let numStore = [];
+
+for (let i = 0; i < arrNum.length; i++) {
+  for (let j = i + 1; j < arrNum.length; j++) {
+    if (arrNum[i] > arrNum[j]) {
+      numStore = arrNum[i];
+      arrNum[i] = arrNum[j];
+      arrNum[j] = numStore;
     }
   }
+}
+
+// for the printing the value;
+for (let i = 0; i < arrNum.length; i++) {
+  console.log(arrNum[i]);
 }
