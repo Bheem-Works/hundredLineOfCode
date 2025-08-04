@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+</head>
+<body>
+    <script>
+        // let's find out the order through the class in the js; 
+        console.log("Date - 3rd july"); 
+    class order{
+        constructor(store){
+            this.store = [0,1,2,3,4,5,6,7,8,9];
+        }
+        getStore(){
+            let storeValue = this.store; 
+            for(let i = 0; i < storeValue.length; i++){
+                // i have to find out the accednd iand the descending order; 
+                
+                for(let j = i + 1; i < storeValue.length; j++){
+                    if(storeValue[i] > storeValue[j]){
+                        let temp = storeValue[i];
+                        storeValue[i] = storeValue[j];
+                        storeValue[j] = temp;
+                    }
+                }
+            }
+            return storeValue;
+        }
+    }        
+    let order1 = new order();
+    console.log(order1.getStore());
+    console.log('answer khai hau');
+    // why am i not havint the answer;?? 
+    // alright we are getting the value; 
+    </script>
+</body>
+</html>
