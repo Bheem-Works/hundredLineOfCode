@@ -35,19 +35,20 @@ class AscDsc {
   number(inputValue) {
     this.store = [...inputValue];
     console.log(this.store,"this store");
-    showAsscending(number){
-    for(let i = 0; i < number.length; i++){
-      for(let j = i +1 ; j < number.length; j++ ){
+  
+    showAsscending(this.store) {
+    for(let i = 0; i < this.store.length; i++){
+      for(let j = i +1 ; j < this.store.length; j++ ){
         let temp;
         if(number[i] > number[j]){
           temp = number[i];
           number[i] = number[j];
           number[j] = temp;
         }
+          }
+      }
       }
     }
-  }
-  }
 
   print() {
     for(let i = 0; i < this.store.length; i++){
