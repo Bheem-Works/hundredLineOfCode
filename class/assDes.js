@@ -1,62 +1,48 @@
-// this will be the assecdning and the diseednikng order;
-
-// first let's find out the assecdning and the descending oder;
-function findAss() {
-  let numberArr = [1, 3, 42, 3, 54];
-  for (let i = 0; i < numberArr.length; i++) {
-    for (let j = i + 1; j < numberArr.length; j++) {
-      let temp;
-      if (numberArr[i] > numberArr[j]) {
-        temp = numberArr[i];
-        numberArr[i] = numberArr[j];
-        numberArr[j] = temp;
-      }
-    }
+// find out the number into the asscending order;
+class FindAscending {
+  constructor(number) {
+    this.num = number;
+    console.log("number", number);
   }
 
-  // for the print;
-  for (let i = 0; i < numberArr.length; i++) {
-    console.log(numberArr[i]);
-  }
-}
-
-findAss(); // we just print out the output
-// now remaining is the print;
-
-class AscDsc {
-  // do i need the constructor ? || constructor can be also put by default by the js;
-  /* simply what i want is that 
-    the user can input the value and find out the assecdning or the descending number of it;
-  (number) => find out the ascending;
-     ^^ -----> [1,3,4,2,6,5]
-    user.number([1,3,4,]); 
-    user.showAsscending(); // now it should execute;
-    */
-  number(inputValue) {
-    this.store = [...inputValue];
-    console.log(this.store,"this store");
-  
-    showAsscending(this.store) {
-    for(let i = 0; i < this.store.length; i++){
-      for(let j = i +1 ; j < this.store.length; j++ ){
+  manageInOdr() {
+    console.log(this.num); // let's check it is it working or not?
+    for (let i = 0; i <= this.num.length; i++) {
+      for (let j = i + 1; j <= this.num.length; j++) {
         let temp;
-        if(number[i] > number[j]){
-          temp = number[i];
-          number[i] = number[j];
-          number[j] = temp;
+        if (this.num[i] > this.num[j]) {
+          temp = this.num[i];
+          this.num[i] = this.num[j];
+          this.num[j] = temp;
         }
-          }
-      }
       }
     }
+  }
 
   print() {
-    for(let i = 0; i < this.store.length; i++){
-      console.log(this.store[i]); // this should give the output of the ascending vise; 
+    for (let i = 0; i <= this.num.length; i++) {
+      console.log(this.num[i]);
     }
   }
 }
 
-const show = new AscDsc();
-show.number([1,2,4,5])
-console.log(show.print());
+const test = new FindAscending([1, 34, 2, 76, 4]);
+test.manageInOdr();
+test.print(); // output : 1,2,3,4....;
+
+// It work but i want this in the number form;
+
+// jati j gare pani 7 number bhnda muni aunu paro.
+function numberCount(){
+  // The problem is = i want a value greater then the one; 
+    let randNum = Math.random(Math.floor()); 
+    if(randNum < 1) {
+      console.log('sorry miss');
+    }
+    console.log(randNum); // random ouptput;
+    if(randNum < 7 ) {
+        console.log('yes it is small then the 7');
+        console.log(randNum); // kun number le kteko vanera tha pauna; 
+    }
+}
+numberCount(); // let's see the output; 
