@@ -13,3 +13,11 @@ body {
   height: 5px;
   border-radius: 5px;
 }
+
+.cirlcle{
+  background-color: blue;
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50px;
+}
