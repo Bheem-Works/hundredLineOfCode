@@ -1,36 +1,15 @@
 /* Changing the style of the sound range */
 
-body{
-  display:flex;
+body {
+  display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
 
-#sound {
-  display: flex;
-  align-items: center;
-  margin: 10px 10px;
-}
-#soundRange {
+.track {
+  background-color: black;
+  width: 150px;
   height: 5px;
-  background: lightgray;
   border-radius: 5px;
-  outline: none;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-#soundRange:hover + #screen {
-  color: lightblue;
-  display: block;
-}
-
-#soundRangeTwo {
-  font-size: 30px;
-}
-
-#screen {
-  display: none;
-  color: black;
 }
