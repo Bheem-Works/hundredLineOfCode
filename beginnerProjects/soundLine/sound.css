@@ -1,14 +1,15 @@
 body {
   display: flex;
   justify-content: center;
-  text-align:center;
+  text-align: center;
   align-items: center;
   min-height: 100vh;
 }
 
 .track {
   background-color: black;
-  width: 100%;
+  background-image: linear-gradient(90deg, red 10%, black 20%);
+  width: 50%;
   height: 10px;
   border-radius: 5px;
   position: relative;
