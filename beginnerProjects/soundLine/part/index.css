@@ -1,10 +1,29 @@
 /* // this is the css */
 
-body{
-  display:flex; 
-  text-align:center; 
+body {
+  display: flex;
+  text-align: center;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
 }
 
+.sliderContainer{
+  display: flex;
+  align-items: center;
+}
+#myRange {
+  background-color: orange;
+  color: purple;
+  width: 100%;
+  height: 30px;
+}
+.slider {
+  background-color: purple;
+  color: purple;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  outline: none;
+  opacity: 0.7;
+}
