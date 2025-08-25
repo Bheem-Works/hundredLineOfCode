@@ -1,15 +1,14 @@
-/* Are you in bruh??  */
-
 body {
   display: flex;
   justify-content: center;
+  text-align:center;
   align-items: center;
   min-height: 100vh;
 }
 
 .track {
   background-color: black;
-  width: 190px;
+  width: 100%;
   height: 10px;
   border-radius: 5px;
   position: relative;
@@ -18,16 +17,27 @@ body {
 .cirlcle {
   background-color: blue;
   top: -10px;
-  top: -10px;
-  left: 30px;
-  right: 0;
-  margin-right: 50px;
+  left: 80px;
   position: absolute;
   width: 30px;
   height: 30px;
   border: none;
   border-radius: 100%;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
+  cursor: pointer;
+}
+
+/* let;s add the hover to the circle 
+let's good. Well i have been usign the mechanical keyboard 
+since the 3 month's ago i guess.  */
+
+.cirlcle:hover {
+  filter: blur(1px);
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.cirlcle:active {
+  background-color: red;
 }

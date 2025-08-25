@@ -1,14 +1,8 @@
-let range = document.getElementById("soundRange");
-let showInScreen = document.getElementById("screen");
-// For check does the range have the value or not ? And yes it has but shocked why does it have value ?
-{
-  if (range.value) {
-    console.log("Range has a value");
-  } else {
-    console.log("Range does not have a value");
-  }
-}
+const slider = document.querySelector(".");
 
-range.addEventListener("input", () => {
-  showInScreen.innerText = range.value;
-});
+/* 
+ - We neeed to select the vlaue of the sound; 
+ - but we are getting the null value; 
+ - we need to make the thing's clear. 
+ - We need to make the ball interactive. But don't know how to make the animation thing's with the 
+ javascript. Well don't know what to do. bruh hahah*/
