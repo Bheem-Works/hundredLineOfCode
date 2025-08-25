@@ -1,5 +1,8 @@
-const slider = document.querySelector(".");
+const slider = document.querySelector(".circle");
 
+slider.addEventListener("click", () => {
+  console.log("circle"); // output: null;
+});
 /* 
  - We neeed to select the vlaue of the sound; 
  - but we are getting the null value; 
