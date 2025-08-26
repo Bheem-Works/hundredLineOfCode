@@ -7,10 +7,14 @@ body {
 }
 
 .track {
-  background-color: black;
-  background-image: linear-gradient(90deg, red 10%, black 20%);
-  width: 50%;
-  height: 10px;
+  background: linear-gradient(
+    90deg,
+    rgba(117, 252, 123) 30%,
+    rgba(214, 123, 213) 0%
+  );
+  outline: none;
+  width: 100%;
+  height: 20px;
   border-radius: 5px;
   position: relative;
 }
