@@ -6,25 +6,33 @@ body {
   min-height: 100vh;
 }
 
+.lineContainer {
+  width: 100%;
+  height: 20px;
+}
 .track {
   background: linear-gradient(
     90deg,
-    rgba(117, 252, 123) 30%,
-    rgba(214, 123, 213) 0%
+    /* previously it was the 7% But now i chaged it to the 100px */
+      rgb(38, 67, 255) 50%,
+    rgb(120, 120, 255) 0%
   );
   outline: none;
-  width: 300px;
+  width: 100%;
   height: 20px;
   border-radius: 5px;
   position: relative;
 }
 
+/* Don't kow man what i have to improve it right. 
+ */
+
 .cirlcle {
   background-color: blue;
   top: -10px;
-  left: 80px;
+  left: 50%;
   position: absolute;
-  width: 30px;
+  width: 10px;
   height: 30px;
   border: none;
   border-radius: 100%;
