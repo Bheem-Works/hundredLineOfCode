@@ -13,3 +13,17 @@ const depthFirstValue = (root) => {
   }
   return result;
 };
+
+
+/* 
+The depth-first-value; 
+daigram; 
+
+            a
+           / \
+          b   c
+         / \   \
+        d   e   f
+
+        Output: {a,b,d,e,c,f}
+*/

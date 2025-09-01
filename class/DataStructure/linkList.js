@@ -47,7 +47,6 @@ class LinkedList {
     let current = this.head;
     while (current != null) {
       console.log(current.value);
-      current = current.next;
     }
   }
 }
