@@ -16,7 +16,7 @@ const d = new BinaryNode("d");
 const e = new BinaryNode("e");
 const f = new BinaryNode("f");
 
-a.right = b;
+a.left = b;
 a.right = c;
 b.left = d;
 b.right = e;
