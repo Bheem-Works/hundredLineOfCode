@@ -4,8 +4,8 @@ slider.addEventListener("click", () => {
   console.log("circle"); // output: null;
 });
 /* 
- - We neeed to select the vlaue of the sound; 
- - but we are getting the null value; 
- - we need to make the thing's clear. 
- - We need to make the ball interactive. But don't know how to make the animation thing's with the 
- javascript. Well don't know what to do. bruh hahah*/
+  how to make it movable  ?  according to the line. 
+  get the items; 
+  set the size of the item in which side it has to move; 
+  starting point and the ending point
+ */

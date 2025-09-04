@@ -39,10 +39,6 @@ body {
   cursor: pointer;
 }
 
-/* let;s add the hover to the circle 
-let's good. Well i have been usign the mechanical keyboard 
-since the 3 month's ago i guess.  */
-
 .cirlcle:hover {
   filter: blur(1px);
   width: 32px;
