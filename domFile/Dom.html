@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom</title>
+  </head>
+  <body>
+    <!-- Javascript dom thing's.  -->
+    <script>
+      /* 
+         create a input elements first; 
+         create a button first; 
+         create the div; 
+         style it. 
+         make it interactive
+
+         function (text){
+         document.body.appendChild(text); // it should append it. 
+         }
+        */
+
+      let input = document.createElement("input");
+      let button = document.createElement("button");
+      button.textContent = "Print";
+      // Button css;
+      button.style.cssText = "background:gray; color:white;";
+
+      // Div css
+      let div = document.createElement("div");
+      div.style.cssText =
+        "border:100% solid black; width:300px; height:150px; background:orange;";
+      function appendToBody(node) {
+        document.body.appendChild(node);
+      }
+      appendToBody(input);
+      appendToBody(button);
+      appendToBody(div);
+    </script>
+  </body>
+</html>
