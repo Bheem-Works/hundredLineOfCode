@@ -30,12 +30,21 @@
       let div = document.createElement("div");
       div.style.cssText =
         "border:100% solid black; width:300px; height:150px; background:orange;";
+
       function appendToBody(node) {
         document.body.appendChild(node);
       }
       appendToBody(input);
       appendToBody(button);
       appendToBody(div);
+
+      // 3 -> Print;
+      const p = document.createElement("p");
+      document.body.appendChild(p);
+      button.addEventListener("click", () => {
+        let inputval = input.value;
+        p.innerText = inputval;
+      });
     </script>
   </body>
 </html>
