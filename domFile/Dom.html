@@ -22,10 +22,13 @@
       // Button css;
       button.style.cssText = "background:gray; color:white;";
 
+      // setting the document style;
+      document.body.style.cssText =
+        "background:black; color:white; display:flex; height:100vh; justify-content:center; ";
       // Div css
       let div = document.createElement("div");
       div.style.cssText =
-        "border:100% solid black; width:300px; height:150px; background:orange;";
+        " margin:10px 30px; border:100% solid black; width:300px; height:150px; background:orange;";
 
       function appendToBody(node) {
         document.body.appendChild(node);
@@ -36,8 +39,7 @@
 
       // Appending the elements isnidet the div;
       div.append(input, button);
-
-      // 3 -> Print;
+      // Print;
       const p = document.createElement("p");
       document.body.appendChild(p);
       button.addEventListener("click", () => {
