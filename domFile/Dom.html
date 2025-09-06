@@ -8,15 +8,12 @@
   <body>
     <!-- Javascript dom thing's.  -->
     <script>
-      /* 
-         create a input elements first; 
-         create a button first; 
-         create the div; 
-         style it. 
-         make it interactive
-        */
-
+    /* 
+     <div > input , button </div> 
+     ani chai style le diera center banaune hola. 
+      */      
       let input = document.createElement("input");
+      input.setAttribute('placeholder',"Raja babu  text haala");
       let button = document.createElement("button");
       button.textContent = "Print";
       // Button css;
@@ -24,11 +21,11 @@
 
       // setting the document style;
       document.body.style.cssText =
-        "background:black; color:white; display:flex; height:100vh; justify-content:center; ";
+        " display:flex; background:black; min-height:100vh; justify-content:center; algin-items:center; ";
       // Div css
       let div = document.createElement("div");
       div.style.cssText =
-        " margin:10px 30px; border:100% solid black; width:300px; height:150px; background:orange;";
+        "align-items:center; text-aling:center;border:100% solid black; width:300px; height:150px; background:orange;";
 
       function appendToBody(node) {
         document.body.appendChild(node);
@@ -36,9 +33,12 @@
       appendToBody(input);
       appendToBody(button);
       appendToBody(div);
-
+      let mixDiv = document.createElement("div");
+      mixDiv.append(input,button);
+      
+      mixDiv.style.cssText = "display:flex; align-items:center; text-alings:center; justify-content:center; margin-top:3rem;"
       // Appending the elements isnidet the div;
-      div.append(input, button);
+      div.append(mixDiv);
       // Print;
       const p = document.createElement("p");
       document.body.appendChild(p);
