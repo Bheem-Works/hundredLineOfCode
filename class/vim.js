@@ -3,12 +3,12 @@ function identify() {
 }
 
 function speak() {
-  var gretting = "hello i am " + identify.call(this);
+  var gretting = 'hello i am ' + identify.call(this);
   console.log(gretting);
 }
 
-var me = { name: "vim" };
-var you = { name: "miso" };
+var me = { name: 'vim' };
+var you = { name: 'miso' };
 
 console.log(identify.call(me)); // vim;
 identify.call(you); // you;
@@ -21,20 +21,20 @@ function letIdentify(context) {
 }
 
 function letCall(context) {
-  var gretting = "hello i am " + identify(context);
+  var gretting = 'hello i am ' + identify(context);
   console.log(gretting);
 }
 
 letIdentify(me);
 
 function pen() {
-  console.log("i am having a pen right now");
+  console.log('i am having a pen right now');
 }
 
 pen.call();
 
 let person = {
-  name: "vim",
+  name: 'vim',
   greet: function () {
     console.log(this.name); // 'vim';
   },
@@ -45,23 +45,23 @@ greeFunc();
 person.greet();
 
 let obj = {
-  a: "a",
+  a: 'a',
 };
-let objChange = (obj.a = "b");
+let objChange = (obj.a = 'b');
 console.log(objChange);
 
 // Change in the 'this' methods
 function foo() {
-  console.log((foo.a = "miso"));
+  console.log((foo.a = 'miso'));
   let change = this.a;
-  change = "miama";
+  change = 'miama';
   console.log(change);
 }
 
 let boo = {
-  a: "noBike",
+  a: 'noBike',
 };
-boo.a = "vimBike";
+boo.a = 'vimBike';
 console.log(boo);
 
 // Github code.
@@ -82,8 +82,8 @@ function hardBind(a, b) {
   this.z = a + b;
 }
 
-var bar = hardBind.bind(null, "a");
-var baz = new bar("b");
+var bar = hardBind.bind(null, 'a');
+var baz = new bar('b');
 console.log(baz.z); // ab;
 
 // Object.create() -> it's a javascript methods which used to create a object, allowing for precise control over
@@ -97,12 +97,12 @@ const animal = {
 };
 
 const cat = Object.create(animal);
-cat.name = "miso";
+cat.name = 'miso';
 cat.speak(); // output : miso makes sound;
 
 const caaat = Object.create(animal, {
   name: {
-    value: "mika",
+    value: 'mika',
     writable: true,
     enumerable: true,
     configurable: true,
@@ -112,10 +112,10 @@ caaat.speak(); // output : mika makes a sound.
 
 // soft bingin ->
 function remot() {
-  console.log("name", this.name);
+  console.log('name', this.name);
 }
-var ooobj = { name: "objc" },
-  oobj2 = { name: "objojj" };
+var ooobj = { name: 'objc' },
+  oobj2 = { name: 'objojj' };
 
 function selfCall() {
   var self = this;
@@ -135,14 +135,14 @@ function car(name, brand) {
   this.brand = brand;
 }
 
-const showCarName = new car("toyota", "bhandina");
+const showCarName = new car('toyota', 'bhandina');
 console.log(showCarName);
 
 function introduce(oneLanguage, twoLanguage) {
-  console.log("hi", +this.name + "loves" + this.language1 + this.language2);
+  console.log('hi', +this.name + 'loves' + this.language1 + this.language2);
 }
-var vimCat = { name: "miso" };
-introduce.apply(person, ["js", "c++"]);
+var vimCat = { name: 'miso' };
+introduce.apply(person, ['js', 'c++']);
 
 // Syntax;
 // ✅ new
