@@ -24,8 +24,19 @@ const menu = document.createElement("a");
 nav.append(ul);
 ul.append(li);
 li.append(a);
+
+bodyAppend(nav);
+bodyAppend(ul);
+bodyAppend(li);
+bodyAppend(a);
+//for example;
+const paragraph = document.createElement("li");
+document.body.append(paragraph);
+console.log(paragraph);
 function anchor(input) {
-  document.createElement("a").textContent = input;
+  //   const inputValue = (document.createElement("a").textContent = input);
+  paragraph.textContent = input;
+//   paragraph.append(input);
   // user can get that value;
 }
 anchor("Why us");
@@ -39,7 +50,3 @@ nav.style.cssText =
 function bodyAppend(input) {
   document.body.append(input);
 }
-bodyAppend(nav);
-bodyAppend(ul);
-bodyAppend(li);
-bodyAppend(a);
