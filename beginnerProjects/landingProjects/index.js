@@ -1,7 +1,5 @@
-/*  
-  "hello man are you here right now ?? hello ? "
- */
-
+// Navbar_sections; 
+{
 const nav = document.createElement("nav");
 const logo = document.createElement("div");
 const img = document.createElement("img");
@@ -101,3 +99,7 @@ function bodyAppend(input) {
 nav.append(logo, ul, div_button);
 // document.body.append(nav);
 bodyAppend(nav);
+
+}
+
+// Landing page; 
