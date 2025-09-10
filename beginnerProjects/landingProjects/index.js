@@ -11,7 +11,7 @@ const buttonOne = document.createElement("button");
 const buttonTwo = document.createElement("button");
 const buttonThree = document.createElement("button");
 const div_button = document.createElement("div");
-const div_anchor = document.createElement('div');
+const div_anchor = document.createElement("div");
 buttonOne.textContent = "button One";
 buttonTwo.textContent = "button two";
 buttonThree.textContent = "button three";
@@ -37,10 +37,12 @@ div_button.append(buttonOne, buttonTwo, buttonThree);
 bodyAppend(nav);
 // Css
 nav.style.cssText =
-  "background:purple;color:white;margin-top:-20px;margin-left:-10px;margin-right:-10px;padding:20px;";
+  "background:skyblue;color:white;display:flex; justify-content:space-between;margin-top:-20px;margin-left:-10px;margin-right:-10px;padding:20px;";
 img.style.cssText = "width:40px; height:50px;border-radius:50%";
-ul.style.cssText = "display:flex;align-items:center;gap:20px; justify-content:center;";
+ul.style.cssText =
+  "display:flex;align-items:center;gap:20px; justify-content:center;";
 li.style.cssText = "";
+div_button.style.cssText = "display:flex; gap;20px;";
 //for example;
 function bodyAppend(input) {
   document.body.append(input);
