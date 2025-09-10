@@ -16,69 +16,43 @@ buttonOne.textContent = "Call";
 buttonTwo.textContent = "Log In";
 buttonThree.textContent = "Get 14 days Free";
 
-// let all_button = { buttonOne, buttonTwo, buttonThree };
-// console.log(all_button);
+// Workign with the li;
+const navLinks = [
+  { text: "WhyUs", href: "#" },
+  { text: "Products", href: "#" },
+  { text: "Features", href: "#" },
+  { text: "Resources", href: "#" },
+  { text: "Pricing", href: "#" },
+];
 
-const WhyUs = document.createElement("a");
-WhyUs.textContent = "WhyUs";
-WhyUs.href = "#";
-
-const Products = document.createElement("a");
-Products.textContent = "Products";
-Products.href = "#";
-
-const Features = document.createElement("a");
-Features.textContent = "Features";
-Features.href = "#";
-
-const Resources = document.createElement("a");
-Resources.textContent = "Resources";
-Resources.href = "#";
-
-const Pricing = document.createElement("a");
-Pricing.textContent = "Pricing";
-Pricing.href = "#";
-
-const firstList = document.createElement("li");
-const secondList = document.createElement("li");
-const thirdList = document.createElement("li");
-const fourthList = document.createElement("li");
-const fifthList = document.createElement("li");
-
-[firstList, secondList, thirdList, fourthList, fifthList].forEach((item) => {
-  item.style.cssText =
-    "cursor:pointer; background:black; color:white; padding:5px 10px;";
+navLinks.forEach((text) => {
+  let list = document.createElement("li");
+  list.style.cssText = "cursor:pointer; padding:20px 10px;list-style:none;";
+  const a = document.createElement("a");
+  a.style.cssText = "text-decoration:none;color:white;";
+  a.textContent = text.text;
+  a.href = "#";
+  list.append(a);
+  ul.append(list);
 });
 
-firstList.append(WhyUs);
-secondList.append(Products);
-thirdList.append(Features);
-fourthList.append(Resources);
-fifthList.append(Pricing);
-ul.append(firstList, secondList, thirdList, fourthList, fifthList);
-
+// Creating the buttons;
 img.setAttribute("src", "bigWebLogo.png");
 logo.style.cssText = "display:flex;";
 logo.append(img);
-li.append(WhyUs);
-li.append(Products);
-li.append(Features);
-li.append(Resources);
-li.append(Pricing);
 div_button.append(buttonOne, buttonTwo, buttonThree);
 // Css
 nav.style.cssText =
-  "background:skyblue;color:white;display:flex; justify-content:space-between;margin-top:-20px;margin-left:-10px;margin-right:-10px;padding:20px;";
+  "background:skyblue;color:white;display:flex; align-items:center;justify-content:space-between;margin-top:-20px;margin-left:-10px;margin-right:-10px;padding:20px;";
 img.style.cssText = "width:40px; height:50px;border-radius:50%";
 ul.style.cssText =
   "display:flex;align-items:center;gap:20px; justify-content:center;";
-li.style.background = "black";
-div_button.style.cssText = "display:flex; gap:10px;";
+div_button.style.cssText = "display:flex; gap:10px";
 
 // Style for the buttons;
 {
   buttonOne.style.cssText =
-    "background:transparent; border:2px solid white; border-radius:30%; padding:10px 15px; cursor:pointer;";
+    "background:transparent; border:2px solid white;  padding:10px 15px; cursor:pointer;";
 
   buttonOne.addEventListener("mouseover", () => {
     buttonOne.style.background = "lightgreen";
@@ -92,12 +66,12 @@ div_button.style.cssText = "display:flex; gap:10px;";
   });
 
   buttonTwo.style.cssText =
-    "background:transparent; border:2px solid white; border-radius:30%; padding:10px 15px; cursor:pointer; ";
+    "background:transparent; border:2px solid white; padding:10px 15px; cursor:pointer; ";
 
   buttonTwo.addEventListener("mouseover", () => {
     buttonTwo.style.background = "blue";
     buttonTwo.style.color = "white";
-    buttonTwo.style.transform = "scale(1.1)";
+    buttonTwo.style.transform = "scale(1)";
   });
   buttonTwo.addEventListener("mouseout", () => {
     buttonTwo.style.backgroundColor = "transparent";
@@ -116,7 +90,7 @@ div_button.style.cssText = "display:flex; gap:10px;";
   });
 
   buttonThree.style.cssText =
-    "background:transparent; border:2px solid white; border-radius:30%; padding:10px 15px; cursor:pointer; ";
+    "background:transparent; border:2px solid white; padding:10px 15px; cursor:pointer; ";
 }
 //for example;
 function bodyAppend(input) {
