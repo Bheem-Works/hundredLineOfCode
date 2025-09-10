@@ -1,3 +1,7 @@
+/*  
+  "hello man are you here right now ?? hello ? "
+ */
+
 const nav = document.createElement("nav");
 const logo = document.createElement("div");
 const img = document.createElement("img");
@@ -7,6 +11,7 @@ const buttonOne = document.createElement("button");
 const buttonTwo = document.createElement("button");
 const buttonThree = document.createElement("button");
 const div_button = document.createElement("div");
+const div_anchor = document.createElement('div');
 buttonOne.textContent = "button One";
 buttonTwo.textContent = "button two";
 buttonThree.textContent = "button three";
