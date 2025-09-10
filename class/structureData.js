@@ -27,8 +27,8 @@ class Student {
 }
 
 const data = new Student();
-data.add("vim");
-data.add("magar");
-data.add("supriya");
+data.add('vim');
+data.add('magar');
+data.add('supriya');
 data.store;
 data.getValue();
