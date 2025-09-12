@@ -104,3 +104,11 @@
 // Landing page;
 const div_image = document.createElement("div");
 const heroSection_image = document.createElement("div");
+
+const textContainer = document.createElement("div");
+const h1 = document.createElement("h1");
+const h3 = document.createElement("h3");
+
+const input = document.createElement("input");
+const button_orange = document.createElement("button");
+const buy_now = document.createElement("a");
