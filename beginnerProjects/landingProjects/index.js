@@ -102,10 +102,12 @@
 }
 
 // Landing page;
-const div_image = document.createElement("div");
-const heroSection_image = document.createElement("div");
 
-const textContainer = document.createElement("div");
+// Creating the elements;
+const div_image = document.createElement("div");
+const heroSection_image = document.createElement("img");
+
+const Container = document.createElement("div");
 const h1 = document.createElement("h1");
 const h3 = document.createElement("h3");
 
@@ -113,10 +115,19 @@ const input = document.createElement("input");
 const button_orange = document.createElement("button");
 const buy_now = document.createElement("a");
 
-h1.textContent = "This year, don't just hit send-send hits."
-h3.textContent = "Get the email marketing platform that powers that power small business growth"
+// Inserting the thing's.
 
-input.setAttribute('placeholder',"Enter your email adress");
-button_orange.textContent = "Get 14 days free"
-buy_now.innerHTML = ""; // add the link; 
-textContainer.append(h1,h3,input,button_orange,buy_now);
+heroSection_image.setAttribute("src", "womenPicWithBook.webp");
+div_image.append(heroSection_image);
+
+h1.textContent = "This year, don't just hit send-send hits.";
+h3.textContent =
+  "Get the email marketing platform that powers that power small business growth";
+
+input.setAttribute("placeholder", "Enter your email adress");
+button_orange.textContent = "Get 14 days free";
+buy_now.innerHTML = ""; // add the link;
+Container.append(h1, h3, input, button_orange, buy_now, div_image);
+document.body.append(textContainer);
+
+// Css is remaining;
