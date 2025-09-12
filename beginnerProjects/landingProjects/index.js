@@ -112,3 +112,11 @@ const h3 = document.createElement("h3");
 const input = document.createElement("input");
 const button_orange = document.createElement("button");
 const buy_now = document.createElement("a");
+
+h1.textContent = "This year, don't just hit send-send hits."
+h3.textContent = "Get the email marketing platform that powers that power small business growth"
+
+input.setAttribute('placeholder',"Enter your email adress");
+button_orange.textContent = "Get 14 days free"
+buy_now.innerHTML = ""; // add the link; 
+textContainer.append(h1,h3,input,button_orange,buy_now);
