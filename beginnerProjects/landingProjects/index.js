@@ -108,26 +108,47 @@ const div_image = document.createElement("div");
 const heroSection_image = document.createElement("img");
 
 const Container = document.createElement("div");
-const h1 = document.createElement("h1");
-const h3 = document.createElement("h3");
 
+const textcontainer = document.createElement("div");
+const h1 = document.createElement("h1");
+h1.style.fontFamily = "Georgia,serif";
+const h3 = document.createElement("h3");
+h3.style.fontFamily = "sanserif";
+h3.style.fontWeight = "400";
+
+const button_section = document.createElement("div");
 const input = document.createElement("input");
 const button_orange = document.createElement("button");
-const buy_now = document.createElement("a");
+const buy_now = document.createElement("button");
+button_section.append(input, button_orange, buy_now);
 
 // Inserting the thing's.
 
 heroSection_image.setAttribute("src", "womenPicWithBook.webp");
 div_image.append(heroSection_image);
 
-h1.textContent = "This year, don't just hit send-send hits.";
-h3.textContent =
-  "Get the email marketing platform that powers that power small business growth";
+h1.innerHTML = "This year, don't just hit <br> send-send hits.";
+h3.innerHTML =
+  "Get the email marketing platform that powers  that power small <br> business growth";
 
 input.setAttribute("placeholder", "Enter your email adress");
 button_orange.textContent = "Get 14 days free";
-buy_now.innerHTML = ""; // add the link;
-Container.append(h1, h3, input, button_orange, buy_now, div_image);
-document.body.append(textContainer);
+buy_now.innerHTML = "Shop"; // add the link;
+textcontainer.append(h1, h3, button_section);
+Container.append(textcontainer, div_image);
+document.body.append(Container);
 
 // Css is remaining;
+Container.style.cssText =
+  "display:flex; justify-content:space-between; gap:4rem; margin:120px 60px;";
+heroSection_image.style.cssText = "width:500px; border-radius:10px;";
+button_section.style.cssText = "margin-top:4rem;";
+
+input.style.cssText =
+  "border:2px solid orange; padding:20px 10px; width:300px; background:white; border-radius:20px; margin:20px;";
+
+button_orange.style.cssText =
+  " background:orange; color:black; border-radius:20px; padding:20px 10px; border:none; font-size:20px; cursor:pointer;";
+
+buy_now.style.cssText =
+  "background:orange; border-radius:20px; border:none; cursor:pointer;  font-size:20px; margin:10px 20px; padding:20px 20px;";
